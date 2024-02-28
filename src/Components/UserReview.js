@@ -32,9 +32,9 @@ function UserReview(props) {
     <>
 
       
-       <div className='container mx-0' style={{height:"92.4vh" ,  backgroundColor:"lightskyblue"}}>
+       <div className='container mx-0' style={{height:"100vh" ,  backgroundColor:"lightskyblue"}}>
 
-        <h1 className='text-[50px] pt-[20px] '  style={{textAlign:"center"}}>Give Review</h1>
+        <h1 className='text-[50px] pt-[80px] '  style={{textAlign:"center"}}>Give Review</h1>
 
         <div className="form mx-[20px] my-[20px]">
             Title :<textarea className="form-control"  id="myBox" rows="1" value={Title} onChange={Titlechange} style={{border:"2px solid black"}} required></textarea>

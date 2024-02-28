@@ -5,7 +5,7 @@ function Reviews(props) {
   return (
     <>
       
-      <div style={{display:"flex"}}>
+      <div style={{display:"flex" }}>
         
           <div className="block" style={{color:"black" , backgroundColor:"lightskyblue" , width:"95vw" , height:"auto" , border:"2px solid black" , borderRadius:"4px"}}>
             <h1 style={{paddingLeft:"8px" }}>Title : {props.Title}</h1>
