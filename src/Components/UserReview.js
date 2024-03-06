@@ -15,7 +15,7 @@ function UserReview(props) {
    const descriptionchange = (e)=>{
        setDescription(e.target.value)
    }
-
+  
    const Resettext = ()=>{
        setTitle("");
        setDescription("");
@@ -32,7 +32,7 @@ function UserReview(props) {
     <>
 
       
-       <div className='container mx-0' style={{height:"100vh" ,  backgroundColor:"lightskyblue"}}>
+       <div className='container mx-0' style={{  backgroundColor:"lightskyblue" , border:'1px solid black'}}>
 
         <h1 className='text-[50px] pt-[80px] '  style={{textAlign:"center"}}>Give Review</h1>
 

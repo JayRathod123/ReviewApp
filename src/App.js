@@ -39,6 +39,7 @@ function App() {
     title = "";
     Rating = "";
     Description ="";
+    
     }
   }
 
@@ -65,15 +66,15 @@ function App() {
         
           <Route path="/Reviews" element={
             <div >
-              {list.map((e, i) => (
-                <div key={i} className="container mb-[-33px] mt-[60px]">  
+              {list.length !==0 ? list.map((e, i) => (
+                <div key={i} className="container  mt-[20px]">  
                   <Reviews  key={i}  title={e.title} index={i} rate={e.Rating} deleteList={deleteList} Description={e.Description} />
-                </div>
-              ))}
-            </div>
+                </div>    
+              )) : <h1 className=' text-center m-10 text-4xl'>Your Review List is Empty</h1>}
+            </div>      
             }
-          />
-          
+          />  
+            
       </Routes>
 
   
