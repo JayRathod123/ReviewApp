@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ReviewApp/static/css/main.49f58133.css",
+    "main.js": "/ReviewApp/static/js/main.888aefc9.js",
+    "static/js/787.88dfdeb5.chunk.js": "/ReviewApp/static/js/787.88dfdeb5.chunk.js",
+    "index.html": "/ReviewApp/index.html",
+    "main.49f58133.css.map": "/ReviewApp/static/css/main.49f58133.css.map",
+    "main.888aefc9.js.map": "/ReviewApp/static/js/main.888aefc9.js.map",
+    "787.88dfdeb5.chunk.js.map": "/ReviewApp/static/js/787.88dfdeb5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49f58133.css",
+    "static/js/main.888aefc9.js"
+  ]
+}
