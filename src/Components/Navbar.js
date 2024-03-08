@@ -15,7 +15,7 @@ function Navbar() {
         <Link
           class="navbar-brand"
           style={{ position: "absolute", left: "100px" }}
-          to="/"
+          to="/home"
         >
           Home
         </Link>

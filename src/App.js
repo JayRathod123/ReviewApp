@@ -20,6 +20,8 @@ function App() {
   }
 
   const[list , setList] = useState(getItems());
+  const[search , setSearch] = useState("");
+
 
   const addlist = (title , Description , Rating)=>{
     
@@ -43,10 +45,29 @@ function App() {
     }
   }
 
-  const deleteList = (key)=>{
-      let newList = [...list];
-      newList.splice(key,1);
-      setList([...newList])
+  // const deleteList = (key)=>{
+  //     let newList = [...list];
+  //     newList.splice(key,1);
+  //     setList([...newList])
+  // }
+
+  const deleteList = (id)=>{
+      const updatedList = list.filter((val,index)=>{
+          return index!==id;
+      })
+
+      setList(updatedList);
+  }
+
+  const SearchItem = (e)=>{
+    setSearch(e.target.value)
+  }
+
+  const filterlist = ()=>{
+    return list.filter((val)=>{
+           return val.title.includes(search)
+      })
+      // return filterItem
   }
   
 
@@ -57,21 +78,28 @@ function App() {
   return (
  
    <BrowserRouter>
-    <Navbar/>
+    
+    <Navbar/> 
 
       <Routes>
            
-          <Route path="/" element={<UserReview  addlist={addlist}/>} />
-
+          <Route exact path="/home" element={<UserReview  addlist={addlist}/>} />
         
           <Route path="/Reviews" element={
-            <div >
-              {list.length !==0 ? list.map((e, i) => (
+            <>
+            <div style={{display:"flex", margin:"auto" , justifyContent:"center" , marginTop:"20px"}}>
+               <input type="text" name="" id="" placeholder='Search By Title ' onChange={SearchItem} value={search} style={{border:"2px solid black" , height:"40px" , width:"50%" , borderRadius:"10px" , padding:"6px" }}/>
+            </div>
+            <div>
+            
+              {filterlist().length !==0 ? filterlist().map((e, i) => (
                 <div key={i} className="container  mt-[20px]">  
-                  <Reviews  key={i}  title={e.title} index={i} rate={e.Rating} deleteList={deleteList} Description={e.Description} />
+                  <Reviews  key={i}  Title={e.title} index={i} rate={e.Rating} deleteList={deleteList} Description={e.Description} />
                 </div>    
               )) : <h1 className=' text-center m-10 text-4xl'>Your Review List is Empty</h1>}
-            </div>      
+
+            </div> 
+            </>     
             }
           />  
             
